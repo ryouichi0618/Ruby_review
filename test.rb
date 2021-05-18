@@ -87,3 +87,73 @@ end
 fruits.each do |fruit, amount|
   puts "#{fruit}は#{amount}です。"
 end
+
+
+
+
+# input_line = gets.chomp
+
+# abc = "1234"
+# def decoration(str)
+#   puts str.length
+#   length = str.length
+#   length += 2
+#   deco = "+"
+#   puts "+" * length
+#   puts "+#{str.chomp}+"
+#   puts "+" * length
+# end
+
+# puts decoration(input_line)
+
+
+
+# require 'bigdecimal'
+# require 'bigdecimal/util'
+
+
+# total = gets.to_d
+# sold_out = gets.to_d
+# last_sell = gets.to_d
+
+# def calculation(total, sold_out, last_sell)
+#     sold_out /= 100
+#     remaining = total - (total * sold_out)
+#     remaining = remaining.round(3)
+#     last_sell /= 100
+#     remaining_last = remaining - (remaining * last_sell)
+#     return remaining_last.to_f
+# end
+
+
+# puts calculation(total, sold_out, last_sell)
+
+
+
+# 問題文
+# あなたはスーパーマーケットを経営しています。
+
+# 今、ある生鮮食品を m[kg] 仕入れました。とても新鮮だったため、生のまま販売したところ、 m[kg] のうち p[%] を売ることができました。
+# 次にその売れ残りをすべてお惣菜にして販売したところ、売れ残った量のうち q[%] が売れました
+# さて、m[kg] 仕入れたこの食品は最終的に何kg 売れ残ったでしょうか。
+# ただし、生鮮食品をお総菜にする際は、量を変えることなく調理できるものとします。
+
+
+require 'bigdecimal'
+require 'bigdecimal/util'
+
+total, sold_out, last_sell = gets.to_d, gets.to_d, gets.to_d
+
+def calculation(total, sold_out, last_sell)
+    sold_out /= 100
+    remaining = total - (total * sold_out)
+    last_sell /= 100
+    remaining_last = remaining - (remaining * last_sell)
+    return remaining_last.to_f
+end
+
+
+puts calculation(total, sold_out, last_sell)
+
+
+
