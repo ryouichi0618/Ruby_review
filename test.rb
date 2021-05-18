@@ -35,3 +35,55 @@ fruits.each do | key_value |
   value = key_value[1]
   puts "#{key}は#{value}"
 end
+
+puts "WEBCAMP".length
+
+puts "WEBCAMP".reverse
+
+puts "WEBCAMPでプログラミング".include?("WEBCAMP")
+
+# puts "キーボードから何か入力してみましょう"
+# input_key = gets
+# puts "入力された内容は#{input_key}"
+
+dice = 0
+puts "6が出るまで繰り返します。"
+while  dice != 6
+  dice = rand(1..6)
+  puts dice
+end
+
+
+# dice = rand(1..6)
+# puts "1~6の間でランダムな数を当ててください"
+# secret = gets.to_i
+# while dice != secret
+#   if secret < 1 || secret > 6
+#     puts "無効な数字なので再入力をお願いします。"
+#   elsif dice == secret
+#     break
+#   elsif dice < secret
+#     print "正解は入力した数より小さい数です。"
+#   else
+#     print "正解は入力した数より大きい数です。"
+#   end
+#   puts "再度1~6の間でランダムな数を当ててください"
+#   secret = gets.to_i
+# end
+
+# print "当たりです。"
+
+
+
+
+for fruit in fruits do
+  puts fruit
+end
+
+for i in 1..10 do
+  print i.to_s + "."
+end
+
+fruits.each do |fruit, amount|
+  puts "#{fruit}は#{amount}です。"
+end
