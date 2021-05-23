@@ -38,3 +38,60 @@ return @memo[[remain, pre]] if @memo[[remain, pre]]
 end
 
 puts check(N, 2)
+
+# メソッドの引数にデフォルト値を設定
+
+def hello(name = 'Unknown')
+  puts "Hello, #{name}"
+  puts "名前の入力がありませんでした。" if name == 'Unknown'
+end
+
+hello(name: 'Kojima')
+
+hello
+
+# キーワード引数について
+
+def hello(name: 'Unknown')
+  puts "Hello, #{name}"
+  puts "名前の入力がありませんでした。" if name == 'Unknown'
+end
+
+hello(name: 'Kojima')
+
+hello
+
+# 仮引数について
+
+# ハッシュ形式
+
+# def some_mathod(**)
+
+# トリボナッチ数列（n）行目を求めるプログラム
+
+puts "0, 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136, 5768,…と続く数列のN番目を入力してください"
+
+num = gets.to_i
+
+a = 0
+b = 0
+c = 1
+n = 3
+
+while n < num
+  d = a + b + c
+  a = b
+  b = c
+  c = d
+
+  n += 1
+end
+
+puts "#{num}番目の数は#{c}です"
+
+
+
+
+
+
+
