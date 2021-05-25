@@ -56,3 +56,4 @@ methods = {
 puts Foo.new.public_send(methods[1])
 puts Foo.new.public_send(methods[2])
 puts Foo.new.public_send(methods[3])
+
