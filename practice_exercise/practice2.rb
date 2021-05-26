@@ -65,4 +65,6 @@ puts (1..n).map{|n| tribonacci n }.reverse
 puts "============"
 
 puts "#{n} 番目の数"
+
+
 puts tribonacci(n)

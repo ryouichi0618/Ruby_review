@@ -138,22 +138,56 @@ end
 # さて、m[kg] 仕入れたこの食品は最終的に何kg 売れ残ったでしょうか。
 # ただし、生鮮食品をお総菜にする際は、量を変えることなく調理できるものとします。
 
+# ----------------------
+# require 'bigdecimal'
+# require 'bigdecimal/util'
 
-require 'bigdecimal'
-require 'bigdecimal/util'
+# total, sold_out, last_sell = gets.to_d, gets.to_d, gets.to_d
 
-total, sold_out, last_sell = gets.to_d, gets.to_d, gets.to_d
+# def calculation(total, sold_out, last_sell)
+#     sold_out /= 100
+#     remaining = total - (total * sold_out)
+#     last_sell /= 100
+#     remaining_last = remaining - (remaining * last_sell)
+#     return remaining_last.to_f
+# end
+# -------------------------
 
-def calculation(total, sold_out, last_sell)
-    sold_out /= 100
-    remaining = total - (total * sold_out)
-    last_sell /= 100
-    remaining_last = remaining - (remaining * last_sell)
-    return remaining_last.to_f
+
+# Javaでのcase(switch)文
+# puts calculation(total, sold_out, last_sell)
+
+# class Main {
+#   public static void main(String[] args) {
+#     int number = 12;
+    
+#     // switch文を用いて、numberを3で割った余りで条件分岐をしてください
+#     switch(number % 3) {
+#       case 0:
+#         System.out.println("3で割り切れます");
+#         break;
+#       case 1:
+#         System.out.println("3で割ると1余ります");
+#         break;
+#       case 2:
+#         System.out.println("3で割ると2余ります");
+#         break;
+#         default:
+#         System.out.println("無効な入力です")
+#     }
+#   }
+# }
+
+# Rubyでのcase文
+number = 12
+
+case number % 3
+when 0 then
+  puts "3で割り切れます"
+when 1 then
+  puts "3で割ると1余ります"
+when 2 then
+  puts "3で割ると2余ります"
+else
+  puts "無効な入力です"
 end
-
-
-puts calculation(total, sold_out, last_sell)
-
-
-
