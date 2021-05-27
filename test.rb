@@ -191,3 +191,19 @@ when 2 then
 else
   puts "無効な入力です"
 end
+
+
+# Javaのfor文
+# class Main {
+#   public static void main(String[] args) {
+#     for (int i = 1; i <= 10; i++) {
+#       System.out.println( i + "回目のループです");
+#     }
+#   }
+# }
+
+# Rubyのfor文
+for i in i  10 do
+  puts "#{i}回目のループです"
+  i += 1
+end
